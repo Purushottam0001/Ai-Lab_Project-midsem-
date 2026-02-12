@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: white;
+    min-height: 100vh;
+}
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+    width: 100%;
+}
+
+/* right side links container */
+.navbar div {
+    display: flex;
+    gap: 30px;
+}
+
+/* remove browser default link style */
+.navbar a,
+.navbar a:visited,
+.navbar a:active {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+/* hover effect */
+.navbar a:hover {
+    color: #00e6a8;
+}
+
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.hero-card {
+    width: 70%;
+    max-width: 900px;
+
+    padding: 70px 60px;     /* more vertical space */
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(14px);
+
+    text-align: center;
+
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* heading spacing */
+.hero-card h1 {
+    font-size: 34px;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* subtitle spacing */
+.hero-card p {
+    font-size: 17px;
+    opacity: 0.85;
+    margin-bottom: 28px;
+}
+
+/* button breathing space */
+.primary-btn {
+    padding: 14px 32px;
+    border-radius: 12px;
+    border: none;
+    background: #00e6a8;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,230,168,0.35);
+}
+
+/* TEAM */
+.team {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.team-card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 12px;
+    width: 220px;
+}
+
+/* PLANNER */
+.planner-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.planner-card {
+    width: 60%;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* RESULT TABLE */
+.result-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.result-card {
+    width: 70%;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    text-align: center;
+}
+
+table {
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 650px;
+    background: rgba(255,255,255,0.95);
+    color: #222;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+th {
+    background: #00c896;
+    color: white;
+    padding: 14px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+tr:hover {
+    background: #eafaf6;
+}
+/* ===== HOW PAGE CENTER FIX ===== */
+
+.how-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.how-card {
+    width: 60%;
+    max-width: 900px;
+    padding: 45px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    margin: auto;
+}
+/* ===== HOW IT WORKS - MODERN AI CARD ===== */
+
+.how-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 50px 60px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+
+    text-align: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how-container:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* Title */
+.how-container h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* Description text */
+.how-container p {
+    color: #cfd8dc;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* Steps */
+.how-step {
+    margin: 22px 0;
+    padding: 16px;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.03);
+    transition: all 0.25s ease;
+}
+
+.how-step:hover {
+    background: rgba(0,230,168,0.08);
+    transform: scale(1.02);
+}
+
+/* Step title */
+.how-step h3 {
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Step description */
+.how-step span {
+    color: #b0bec5;
+    font-size: 15px;
+}
+/* RESULT PAGE */
+
+.result-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.result-card {
+    width: 70%;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.result-card h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* MODERN TABLE */
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 14px;
+    background: white;
+}
+
+.modern-table thead {
+    background: linear-gradient(135deg,#19c37d,#00a67e);
+    color: white;
+}
+
+.modern-table th {
+    padding: 16px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.modern-table td {
+    padding: 14px;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+}
+
+.modern-table tbody tr:nth-child(even) {
+    background: #f4f6f8;
+}
+
+.modern-table tbody tr:hover {
+    background: #e9f7f3;
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+/* PERFORMANCE TEXT */
+
+.performance-text {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #c7fff0;
+}
