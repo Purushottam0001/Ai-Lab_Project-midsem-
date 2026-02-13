@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyWiz Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>STUDYWIZ</h2>
+
+    <div class="nav-right">
+        <a href="/">Home</a>
+        <a href="/planner">Create</a>
+        <a href="/how">How it Works</a>
+    </div>
+</div>
+
+
+<!-- RESULT CONTAINER -->
+<div class="result-wrapper">
+
+    <div class="result-card">
+
+        <h2>Your AI Generated Study Plan</h2>
+
+        <table class="modern-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning</th>
+                    <th>Afternoon</th>
+                    <th>Evening</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            {% for day, slots in timetable.items() %}
+                <tr>
+                    <td>{{ day }}</td>
+                    <td>{{ slots[0] }}</td>
+                    <td>{{ slots[1] }}</td>
+                    <td>{{ slots[2] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <h3 class="performance-text">
+            {{ performance }}
+        </h3>
+
+    </div>
+
+</div>
+
+</body>
+</html>

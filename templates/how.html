@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it Works - StudyWiz</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <h2>STUDYWIZ</h2>
+    </div>
+
+    <div class="nav-right">
+        <a href="/">Home</a>
+        <a href="/planner">Create</a>
+        <a href="/how">How it Works</a>
+    </div>
+</div>
+
+
+<!-- HOW IT WORKS SECTION -->
+<div class="how-container">
+
+    <h2>The Intelligence Behind StudyWiz</h2>
+
+    <p>
+        StudyWiz uses heuristic AI logic where subjects with higher difficulty
+        receive more study sessions. The system distributes workload evenly
+        across the week to maintain balance.
+    </p>
+
+    <div class="how-step">
+        <h3>1. Problem Modeling</h3>
+        <span>
+            Subjects are treated as tasks and difficulty defines priority weight.
+        </span>
+    </div>
+
+    <div class="how-step">
+        <h3>2. AI Scheduling</h3>
+        <span>
+            Weighted allocation distributes study sessions intelligently
+            across days.
+        </span>
+    </div>
+
+    <div class="how-step">
+        <h3>3. Performance Prediction</h3>
+        <span>
+            Performance is estimated using weighted scoring based on workload.
+        </span>
+    </div>
+
+</div>
+
+</body>
+</html>

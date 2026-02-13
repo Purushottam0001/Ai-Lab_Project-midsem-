@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Plan - StudyWiz</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>STUDYWIZ</h2>
+
+    <div class="nav-right">
+        <a href="/">Home</a>
+        <a href="/planner">Create</a>
+        <a href="/how">How it Works</a>
+    </div>
+</div>
+
+
+<!-- PLANNER CONTAINER -->
+<div class="planner-wrapper">
+
+    <div class="planner-card">
+
+        <h2>Enter Study Details</h2>
+
+        <form action="/generate" method="POST">
+
+            <!-- SUBJECT INPUT -->
+            <div id="subjects">
+
+                <div class="row">
+                    <input type="text"
+                           name="subject"
+                           placeholder="Subject"
+                           required>
+
+                    <input type="number"
+                           name="hours"
+                           placeholder="Study Hours"
+                           required>
+
+                    <select name="difficulty">
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="button"
+                    class="primary-btn"
+                    onclick="addRow()">
+                Add Subject
+            </button>
+
+            <hr style="margin:30px 0; opacity:0.3;">
+
+            <!-- AVAILABLE TIME SLOTS -->
+            <h3>Select Available Time Slots</h3>
+            <p style="opacity:0.8; margin-bottom:15px;">
+                Select only the time periods when you are free.
+            </p>
+
+            <!-- MONDAY -->
+            <div class="time-block">
+                <h4>Monday</h4>
+                <label><input type="checkbox" name="monday" value="06:00-07:00"> 6:00–7:00 AM</label>
+                <label><input type="checkbox" name="monday" value="07:00-08:00"> 7:00–8:00 AM</label>
+                <label><input type="checkbox" name="monday" value="18:00-19:00"> 6:00–7:00 PM</label>
+                <label><input type="checkbox" name="monday" value="19:00-20:00"> 7:00–8:00 PM</label>
+            </div>
+
+            <!-- TUESDAY -->
+            <div class="time-block">
+                <h4>Tuesday</h4>
+                <label><input type="checkbox" name="tuesday" value="06:00-07:00"> 6:00–7:00 AM</label>
+                <label><input type="checkbox" name="tuesday" value="18:00-19:00"> 6:00–7:00 PM</label>
+                <label><input type="checkbox" name="tuesday" value="19:00-20:00"> 7:00–8:00 PM</label>
+            </div>
+
+            <!-- WEDNESDAY -->
+            <div class="time-block">
+                <h4>Wednesday</h4>
+                <label><input type="checkbox" name="wednesday" value="06:00-07:00"> 6:00–7:00 AM</label>
+                <label><input type="checkbox" name="wednesday" value="18:00-19:00"> 6:00–7:00 PM</label>
+            </div>
+
+            <br>
+
+            <button type="submit" class="primary-btn">
+                Generate AI Plan
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
